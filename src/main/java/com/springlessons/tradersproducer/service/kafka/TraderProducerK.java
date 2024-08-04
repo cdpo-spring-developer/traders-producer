@@ -3,17 +3,15 @@ package com.springlessons.tradersproducer.service.kafka;
 import com.springlessons.tradersproducer.dto.Trader;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
-import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.CompletableFuture;
 
 @Service
-public class TraderProducer {
+public class TraderProducerK {
     private final KafkaTemplate<String, Trader> kafkaTemplate;
 
-    public TraderProducer(KafkaTemplate<String, Trader> kafkaTemplate) {
+    public TraderProducerK(KafkaTemplate<String, Trader> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 
